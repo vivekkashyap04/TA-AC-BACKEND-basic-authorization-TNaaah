@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form method="POST" action="/users/register">
+      <h2>Registration Form</h2>
+      <% if(error){ %>
+      <p><%= error %></p>
+      <% } %>
+      <input type="text" placeholder="username" name="name" />
+      <input type="email" placeholder="email" required name="email" />
+      <input type="password" placeholder="password" required name="password" />
+      <input type="text" placeholder="user/admin" name="role" />
+      <button type="submit">Add User</button>
+    </form>
+  </body>
+</html>
